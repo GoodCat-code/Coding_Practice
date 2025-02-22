@@ -1,0 +1,8 @@
+﻿  TextQuest.cpp
+C:\Users\Konstantin\source\repos\TextQuest\TextQuest.cpp(39,23): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Konstantin\source\repos\TextQuest\TextQuest.cpp(87,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Konstantin\source\repos\TextQuest\TextQuest.cpp(88,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Konstantin\source\repos\TextQuest\TextQuest.cpp(96,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Konstantin\source\repos\TextQuest\TextQuest.cpp(97,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Konstantin\source\repos\TextQuest\TextQuest.cpp(76): warning C4715: 'Death': not all control paths return a value
+  TextQuest.vcxproj -> C:\Users\Konstantin\source\repos\TextQuest\x64\Debug\TextQuest.exe

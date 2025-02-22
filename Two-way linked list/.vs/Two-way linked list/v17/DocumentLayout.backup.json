@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Konstantin\\source\\repos\\Two-way linked list\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CE8BE2D8-C2D9-4EF8-ABCB-78BD6506990C}|Two-way linked list.vcxproj|C:\\Users\\Konstantin\\source\\repos\\Two-way linked list\\Two-way linked list.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CE8BE2D8-C2D9-4EF8-ABCB-78BD6506990C}|Two-way linked list.vcxproj|solutionrelative:Two-way linked list.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Two-way linked list.cpp",
+              "DocumentMoniker": "C:\\Users\\Konstantin\\source\\repos\\Two-way linked list\\Two-way linked list.cpp",
+              "RelativeDocumentMoniker": "Two-way linked list.cpp",
+              "ToolTip": "C:\\Users\\Konstantin\\source\\repos\\Two-way linked list\\Two-way linked list.cpp",
+              "RelativeToolTip": "Two-way linked list.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAKsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-20T04:54:38.046Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
