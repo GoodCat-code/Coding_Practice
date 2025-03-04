@@ -10,15 +10,15 @@ public:
 	void Insert(T value);
 	T ExtractMin();
 	T PeekMin();
-	void Print();
+	void Print(); // for debug
 
 private:
-	int Size;
+	size_t Size;
 	size_t Capacity;
 	T* H_arr;
 	void Resize(size_t new_capacity);
-	void H_rework_up();
-	void H_rework_dw(int index = 0);
+	void ReworkUp();
+	void ReworkDw(int index = 0);
 };
 
 template<typename T>
@@ -32,9 +32,7 @@ Heap<T>::Heap()
 template<typename T>
 Heap<T>::~Heap()
 {
-	cout << "destruction";
 	delete[] H_arr;
-	cout << "end_destruction";
 }
 
 template<typename T>
@@ -50,7 +48,7 @@ void Heap<T>::Insert(T value)
 		Resize(Capacity * 2);
 
 	H_arr[Size] = value;
-	H_rework_up();
+	ReworkUp();
 	Size++;
 }
 
@@ -64,11 +62,10 @@ T Heap<T>::ExtractMin()
 
 	T temp = H_arr[0];
 	H_arr[0] = H_arr[Size - 1];
-	//H_arr[Size] = temp;
 	Size--;
 
-	if (Size > 1)
-		H_rework_dw();
+	if (Size > 1) // rework excludes for empty and 1 element array
+		ReworkDw();
 
 	return temp;
 }
@@ -94,6 +91,8 @@ void Heap<T>::Print()
 template<typename T>
 void Heap<T>::Resize(size_t new_capacity)
 {
+	if (new_capacity < Size) return; // just for best practice, there are necessary checks in methods
+
 	T* temp_arr = new T[new_capacity];
 	for (int i = 0; i < Size; i++)
 		temp_arr[i] = H_arr[i];
@@ -104,7 +103,7 @@ void Heap<T>::Resize(size_t new_capacity)
 }
 
 template<typename T>
-void Heap<T>::H_rework_up()
+void Heap<T>::ReworkUp()
 {
 	T temp;
 	int index = Size;
@@ -119,30 +118,25 @@ void Heap<T>::H_rework_up()
 }
 
 template<typename T>
-void Heap<T>::H_rework_dw(int index)
+void Heap<T>::ReworkDw(int index) // recursive
 {
 	T temp;
-	//cout << index << endl;
-	//cout << H_arr[index] << "\t" << H_arr[2 * index + 1] << "\t" << H_arr[2 * index + 2] << endl;
-	//Heap::Print();
 
-	while ((2 * index + 1) < Size || (2 * index + 2) < Size)
+	while ((2 * index + 1) < Size || (2 * index + 2) < Size) // check index's value
 	{
 		if (H_arr[index] >= H_arr[2 * index + 1])
 		{
-			//cout << H_arr[index] << "\t" << H_arr[2 * index + 1] << endl;
 			temp = H_arr[index];
 			H_arr[index] = H_arr[2 * index + 1];
 			H_arr[2 * index + 1] = temp;
-			H_rework_dw(index += 1);
+			ReworkDw(index += 1);
 		}
 		else if (H_arr[index] >= H_arr[2 * index + 2])
 		{
-			//cout << H_arr[index] << "\t" << H_arr[2 * index + 2] << endl;
 			temp = H_arr[index];
 			H_arr[index] = H_arr[2 * index + 2];
 			H_arr[2 * index + 2] = temp;
-			H_rework_dw(index += 2);
+			ReworkDw(index += 2);
 		}
 		else return;
 	}
@@ -153,7 +147,15 @@ int main()
 {
 	Heap<int> Hp;
 
-	cout << Hp.ExtractMin() << endl;
+	try
+	{
+		Hp.ExtractMin();
+	}
+	catch (exception e)
+	{
+		cout << e.what();
+	};
+
 	Hp.Print();
 
 	cout << Hp.IsEmpty() << endl;

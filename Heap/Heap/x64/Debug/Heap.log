@@ -1,2 +1,18 @@
 ﻿  Heap.cpp
+C:\Users\Konstantin\source\repos\Coding_Practice\Heap\Heap.cpp(109,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+      C:\Users\Konstantin\source\repos\Coding_Practice\Heap\Heap.cpp(109,12):
+      the template instantiation context (the oldest one first) is
+          C:\Users\Konstantin\source\repos\Coding_Practice\Heap\Heap.cpp(148,12):
+          see reference to class template instantiation 'Heap<int>' being compiled
+          C:\Users\Konstantin\source\repos\Coding_Practice\Heap\Heap.cpp(26,1):
+          while compiling class template member function 'Heap<int>::Heap(void)'
+              C:\Users\Konstantin\source\repos\Coding_Practice\Heap\Heap.cpp(148,12):
+              see the first reference to 'Heap<int>::Heap' in 'main'
+          C:\Users\Konstantin\source\repos\Coding_Practice\Heap\Heap.cpp(107,1):
+          while compiling class template member function 'void Heap<int>::ReworkUp(void)'
+              C:\Users\Konstantin\source\repos\Coding_Practice\Heap\Heap.cpp(51,10):
+              see the first reference to 'Heap<int>::ReworkUp' in 'Heap<int>::Insert'
+              C:\Users\Konstantin\source\repos\Coding_Practice\Heap\Heap.cpp(163,11):
+              see the first reference to 'Heap<int>::Insert' in 'main'
+  
   Heap.vcxproj -> C:\Users\Konstantin\source\repos\Coding_Practice\Heap\x64\Debug\Heap.exe
